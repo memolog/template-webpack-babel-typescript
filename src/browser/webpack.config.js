@@ -1,5 +1,6 @@
 /* eslint-env node */
 
+const webpack = require("webpack");
 const path = require("path");
 const TerserPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -20,7 +21,7 @@ const config = {
     filename: "js/[name].js",
     chunkFilename: "[id].bundle.js",
     path: path.resolve(__dirname, "../../public/browser"),
-    publicPath: "/js",
+    publicPath: "/",
   },
   optimization: {
     namedChunks: true,
@@ -61,6 +62,9 @@ const config = {
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: true,
+            }
           },
           {
             loader: "css-loader",
@@ -79,6 +83,9 @@ const config = {
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: true,
+            }
           },
           {
             loader: "css-loader",
@@ -102,6 +109,7 @@ const config = {
     ],
   },
   devServer: {
+    hot: true,
     contentBase: path.join(__dirname, '../../public/browser'),
     port: 9000
   }
