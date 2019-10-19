@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --config=./src/browser/jest.config.json && jest --config=./src/node/jest.config.json",
-    "build": "rm -rf ./public && webpack --config ./src/browser/webpack.config.js && tsc -p ./src/node/tsconfig.json && cp ./src/browser/index.html ./public/browser/"
+    "build": "rm -rf ./public && webpack --config ./src/browser/webpack.config.js && tsc -p ./src/node/tsconfig.json && cp ./src/browser/index.html ./public/browser/",
+    "start": "cd ./src/browser && webpack-dev-server"
   },
   "keywords": [
     "webpack",
@@ -40,6 +41,7 @@
     "typescript": "^3.6.4",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.2",
     "whatwg-fetch": "^3.0.0"
   }
 }

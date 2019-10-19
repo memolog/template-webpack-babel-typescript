@@ -101,6 +101,10 @@ const config = {
       },
     ],
   },
+  devServer: {
+    contentBase: path.join(__dirname, '../../public/browser'),
+    port: 9000
+  }
 };
 
 if (process.env.NODE_ENV === "development") {
