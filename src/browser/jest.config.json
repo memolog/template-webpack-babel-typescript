@@ -1,6 +1,9 @@
 {
   "transform": {
-    "^.+\\.tsx?$": "babel-jest",
-    "\\.(s?css|less)$": "../../__mocks__/styleMock.js"
-  }
+    "^.+\\.tsx?$": "ts-jest",
+    "\\.(s?css|less)$": "./__mocks__/styleMock.js"
+  },
+  "setupFiles": [
+    "./__mocks__/browser-mock.ts"
+  ]
 }

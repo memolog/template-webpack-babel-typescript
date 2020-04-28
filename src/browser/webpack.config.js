@@ -19,8 +19,8 @@ const config = {
   },
   output: {
     filename: "js/[name].js",
-    chunkFilename: "[id].bundle.js",
-    path: path.resolve(__dirname, "../../public/browser"),
+    chunkFilename: "js/[id].bundle.js",
+    path: path.resolve(__dirname, "../../public/"),
     publicPath: "/",
   },
   optimization: {

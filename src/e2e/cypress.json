@@ -1,0 +1,4 @@
+{
+    "pluginsFile": "cypress/plugins/index.ts",
+    "supportFile": "cypress/plugins/index.ts"
+}

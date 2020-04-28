@@ -1,3 +1,3 @@
-exports.say = function() {
+export function say() {
   return "Hello World";
 }

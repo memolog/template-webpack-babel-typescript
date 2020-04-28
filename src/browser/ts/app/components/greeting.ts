@@ -1,7 +1,9 @@
 export class Greeting {
   constructor() {
   }
-  say() {
-    return "Hello World"
+  async say() {
+    const resp = await fetch('http://localhost:3000/hello');
+    const json = await resp.json();
+    return json && json.greeting;
   }
 }

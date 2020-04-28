@@ -1,5 +1,5 @@
-const greeting = require('./greeting/greeting');
+import { say } from "./greeting/greeting";
 
-exports.greeting = function () {
-  return greeting.say();
+export function greeting() {
+  return say();
 }

@@ -1,56 +1,24 @@
 {
   "name": "template-webpack-babel-typescript",
   "version": "1.0.0",
-  "description": "Template to use webpack, babel, typescript (and React)",
+  "description": "Template to use webpack, babel, typescript (and preact)",
   "main": "index.js",
   "scripts": {
-    "test": "jest --config=./src/browser/jest.config.json && jest --config=./src/node/jest.config.json",
-    "build": "rm -rf ./public && webpack --config ./src/browser/webpack.config.js && tsc -p ./src/node/tsconfig.json && cp ./src/browser/index.html ./public/browser/",
-    "start": "cd ./src/browser && webpack-dev-server",
-    "update-packages": "./node_modules/.bin/npm-check-updates -u"
+    "test": "cd ./src/browser && npm test && cd ../node && npm test",
+    "e2e": "cd ./src/e2e && npm test",
+    "build": "cd ./src/browser && npm run build && cd ../node && npm run build",
+    "start-client": "cd ./src/node && npm start",
+    "start": "node ./server/app/server.js",
+    "update-packages": "npm-check-updates -u"
   },
   "keywords": [
     "webpack",
     "babel",
-    "typescript"
+    "typescript",
+    "preact",
+    "cypress"
   ],
   "author": "Yutaka Yamaguchi",
   "license": "ISC",
-  "devDependencies": {
-    "@babel/core": "^7.8.7",
-    "@babel/plugin-proposal-class-properties": "^7.8.3",
-    "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
-    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
-    "@babel/plugin-transform-react-jsx": "^7.8.3",
-    "@babel/preset-env": "^7.8.7",
-    "@babel/preset-typescript": "^7.8.3",
-    "@types/ffmpeg.js": "^3.1.1",
-    "@types/jest": "^25.1.4",
-    "@types/node": "^13.9.1",
-    "autoprefixer": "^9.7.4",
-    "babel": "^6.23.0",
-    "babel-jest": "^25.1.0",
-    "babel-loader": "^8.0.6",
-    "babel-plugin-dynamic-import-node": "^2.3.0",
-    "babel-polyfill": "^6.26.0",
-    "bufferutil": "^4.0.1",
-    "canvas": "^2.6.1",
-    "core-js": "^3.6.4",
-    "css-loader": "^3.4.2",
-    "fibers": "^4.0.2",
-    "jest": "^25.1.0",
-    "mini-css-extract-plugin": "^0.9.0",
-    "node-sass": "^4.13.1",
-    "npm-check-updates": "^4.0.4",
-    "postcss-loader": "^3.0.0",
-    "preact": "^10.3.4",
-    "sass": "^1.26.3",
-    "sass-loader": "^8.0.2",
-    "typescript": "^3.8.3",
-    "utf-8-validate": "^5.0.2",
-    "webpack": "^4.42.0",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3",
-    "whatwg-fetch": "^3.0.0"
-  }
+  "devDependencies": {}
 }

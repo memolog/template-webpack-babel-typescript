@@ -14,9 +14,15 @@ export class App extends Component {
   constructor(props: AppProps) {
     super(props);
     this.greeting = new Greeting();
-    this.state = {
-        greeting: this.greeting.say()
-    };
+  }
+  state = {
+    greeting: ""
+  }
+  async componentDidMount() {
+    const greeting = await this.greeting.say();
+    this.setState({
+      greeting: greeting
+    });
   }
   render(props: AppProps, state: AppState) {
     return (
