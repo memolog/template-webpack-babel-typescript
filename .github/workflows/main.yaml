@@ -5,7 +5,7 @@ on:
 
 jobs:
   unit-test:
-    name: Unit Tests
+    name: All Tests
     runs-on: ubuntu-latest
     steps:
       - name: checkout the triggered branch from the repository
@@ -19,6 +19,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 14
+      - name: Install all npm packages
+        run: npm run install-all
       - name: Start Node Express Server on background
         run: nohup npm start > /dev/null 2>&1 &
       - name: Unit tests
