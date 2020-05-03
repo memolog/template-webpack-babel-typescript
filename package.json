@@ -10,7 +10,7 @@
     "start-client": "cd ./src/node && npm start",
     "start": "node ./server/app/server.js",
     "update-packages": "npm-check-updates -u",
-    "install-all": "npm install && cd ./src/browser && npm install && cd ../node && npm install && cd ../e2e && npm install"
+    "install-all": "npm install && cd ./src/browser && npm install && cd ../node && npm install"
   },
   "keywords": [
     "webpack",
