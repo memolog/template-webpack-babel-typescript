@@ -9,7 +9,8 @@
     "build": "cd ./src/browser && npm run build && cd ../node && npm run build",
     "start-client": "cd ./src/node && npm start",
     "start": "node ./server/app/server.js",
-    "update-packages": "npm-check-updates -u"
+    "update-packages": "npm-check-updates -u",
+    "install-all": "npm install && cd ./src/browser && npm install && cd ../node && npm install && cd ../e2e && npm install"
   },
   "keywords": [
     "webpack",

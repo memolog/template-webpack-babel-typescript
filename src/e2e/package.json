@@ -1,19 +1,19 @@
 {
-    "name": "template-webpack-babel-typescript-e2e",
-    "version": "1.0.0",
-    "description": "",
-    "author": "Yutaka Yamaguchi",
-    "license": "ISC",
-    "scripts": {
-      "test": "cypress run",
-      "open": "cypress open",
-      "start": "node ../../server/app/server.js",
-      "update-packages": "npm-check-updates -u"
-    },
-    "devDependencies": {
-        "@types/node": "^13.13.4",
-        "cypress": "^4.5.0",
-        "npm-check-updates": "^4.1.2",
-        "typescript": "^3.8.3"
-    }
+  "name": "template-webpack-babel-typescript-e2e",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Yutaka Yamaguchi",
+  "license": "ISC",
+  "scripts": {
+    "test": "cypress run",
+    "open": "cypress open",
+    "start": "node ../../server/app/server.js",
+    "update-packages": "npm-check-updates -u"
+  },
+  "devDependencies": {
+    "@types/node": "^13.13.4",
+    "cypress": "^4.5.0",
+    "npm-check-updates": "^4.1.2",
+    "typescript": "^3.8.3"
+  }
 }
